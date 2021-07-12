@@ -22,3 +22,12 @@ jobs:
       with:
         push: true
         tags: fairyinabottle4/docker-hy.github.io
+
+    - name: Deploy on heroku
+      uses: akhileshns/heroku-deploy@v3.12.12
+      with:
+        heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+        heroku_app_name: pipeline-3-1
+        heroku_email: keithlow98@gmail.com
+        usedocker: true
+    
